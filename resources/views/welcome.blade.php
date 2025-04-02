@@ -994,7 +994,7 @@
                                     </li>
                                 </ul>
                 <h3>
-                    <a href="#">
+                    <a href="{{ route('event_details', ['id' => $event->id]) }}">
                         {{ $event->title }}
                     </a>
                 </h3>
