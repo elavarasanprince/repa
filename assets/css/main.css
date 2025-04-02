@@ -1894,13 +1894,13 @@ span {
   background-position: top;
   background-attachment: fixed;
 }
-.achievement-wrapper .section-title{
+/*.achievement-wrapper .section-title{
   background: url('../img/section-bg.jpg');
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-position: top;
   background-attachment: fixed;
-}
+} */
 @media (max-width: 1399px) {
   .achievement-section-3 .shape-image {
     display: none;
@@ -2600,6 +2600,10 @@ span {
   .content
   h6 {
   font-size: 16px;
+	      -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
 }
 .footer-widgets-wrapper
   .single-footer-widget
@@ -9635,6 +9639,10 @@ transition: width 3s ease;
 }
 .news-content h3 a{
   text-transform: initial;
+	    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
 }
 .counter-items .icon{
   text-align: center;
