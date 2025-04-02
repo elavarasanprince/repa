@@ -83,7 +83,7 @@
                                 <div class="hero-content">
                                     <h6 data-animation="slideInRight" data-duration="2s" data-delay=".3s">WELCOME TO REPA </h6>
                                     <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s">
-                                        Need for REPAa
+                                        Need for REPA
 
                                     </h1>
                                     <p data-animation="slideInRight" data-duration="2s" data-delay=".7s">
