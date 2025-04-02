@@ -28,6 +28,6 @@
 
 <!--<< Nice Select.css >>-->
 <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
-
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 <!--<< Main.css >>-->
 <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
