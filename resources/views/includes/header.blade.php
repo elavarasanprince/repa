@@ -80,7 +80,7 @@
                        <ul class="contact-list">
                            <li>
                                <i class="far fa-envelope"></i>
-                               <a href="mailto:info@example.com" class="link">info@tnrepa.in</a>
+                               <a href="mailto:info@tnrepa.in" class="link">info@tnrepa.in</a>
                            </li>
                            <li>
                                <i class="fa-solid fa-phone-volume"></i>
@@ -119,7 +119,7 @@
                    <div class="d-flex">
 
                        <div class="logo">
-                           <a href="{{ route('welcome') }}" class="header-logo">
+                           <a href="{{ url('/') }}" class="header-logo">
                                <img src="{{ asset('assets/img/logo/logo.png') }}" alt="logo-img">
                            </a>
                        </div>

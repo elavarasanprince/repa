@@ -2372,7 +2372,7 @@ span {
 }
 
 .footer-widgets-wrapper {
-  padding: 90px 0 120px;
+  /* padding: 90px 0 120px; */
   position: relative;
   z-index: 9;
 }
@@ -6996,7 +6996,7 @@ input.main-search-input::placeholder {
   }
 }
 .section-title span {
-  color: var(--theme);
+  color: #ffffff;
   margin-bottom: 10px;
   display: inline-block;
   font-weight: 500;
