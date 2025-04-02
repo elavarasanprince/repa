@@ -71,7 +71,7 @@ $events = DB::table('events')->get();
                 </div>
                 <div class="news-content">
                     <h3>
-                        <a href="">{{ $event->title }}</a>
+                        <a href="{{ route('event_details', ['id' => $event->id]) }}">{{ $event->title }}</a>
                     </h3>
                    <a href="{{ route('event_details', ['id' => $event->id]) }}"
  class="theme-btn-2 mt-3">
