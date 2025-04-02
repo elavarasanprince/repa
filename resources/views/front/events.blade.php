@@ -55,6 +55,7 @@ $events = DB::table('events')->get();
 <div class="row justify-content-center">
     @foreach($events as $event)
         <div class="col-lg-4">
+            <a href="{{ route('event_details', ['id' => $event->id]) }}">
             <div class="news-card-items">
                 <div class="news-image">
                   
@@ -79,6 +80,7 @@ $events = DB::table('events')->get();
                     </a>
                 </div>
             </div>
+        </a>
         </div>
     @endforeach
 </div>

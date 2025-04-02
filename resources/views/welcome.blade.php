@@ -984,14 +984,14 @@
             </div>
             <div class="news-content">
             <ul>
-                                    <li>
+                                    {{-- <li>
                                         <i class="fa-regular fa-user"></i>
                                         By Admin
                                     </li>
                                     <li>
                                         <i class="fa-solid fa-tag"></i>
                                         REPA Launch
-                                    </li>
+                                    </li> --}}
                                 </ul>
                 <h3>
                     <a href="{{ route('event_details', ['id' => $event->id]) }}">
