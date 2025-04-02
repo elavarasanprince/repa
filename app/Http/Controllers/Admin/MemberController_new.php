@@ -6,9 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\MemberReg;
 use App\Models\LatestNews;
-use Illuminate\Support\Facades\DB;
-use App\Imports\MemberImport;
-use Maatwebsite\Excel\Facades\Excel;
+use DB;
 
 class MemberController extends Controller
 {
@@ -46,7 +44,7 @@ class MemberController extends Controller
        
         // Validate input
         $request->validate([
-            'title' => 'required|string|max:500',
+            'title' => 'required|string|max:255|unique:latest_news,title',
             'link' => 'required|url|max:500',
         ]);
 
@@ -199,61 +197,4 @@ class MemberController extends Controller
     {
         //
     }
-
-
-    public function import(Request $request)
-    {
-        $request->validate([
-            'file' => 'required|mimes:xlsx,xls,csv'
-        ]);
-    
-        Excel::import(new MemberImport, $request->file('file'));
-    
-        return redirect()->back()->with('success', 'Members imported successfully!');
-    }
-
-public function payments()
-{
-    // Fetch all members with related fees and user details
-    $members = MemberReg::with(['fees.capacity', 'user'])->get();
-
-    // Initialize an array to store member financial details
-    $member_data = [];
-
-    foreach ($members as $member) {
-        // Fetch member's capacity fees
-        $member_fees = DB::table('fees_repa')
-            ->join('capacity', 'fees_repa.capacity_id', '=', 'capacity.id')
-            ->select(
-                'fees_repa.member_id',
-                'capacity.name as capacity_name',
-                'capacity.fees as capacity_fees'
-            )
-            ->where('fees_repa.member_id', $member->id)
-            ->first();
-
-        // Get the total paid amount for each member
-        $total_paid = DB::table('payments')
-            ->where('member_id', $member->id)
-            ->sum('pay_amount');
-
-        $total_paid = $total_paid !== null ? (float) $total_paid : 0; // Ensure numeric
-
-        // Calculate balance amount
-        $capacity_fees = @$member_fees->capacity_fees ?? 0;
-        $balance_amount = $capacity_fees - $total_paid;
-
-        // Store data for each member
-        $member_data[] = [
-            'id' => $member->id,
-            'name' => $member->user->name ?? 'N/A',
-            'capacity_name' => $member_fees->capacity_name ?? 'N/A',
-            'capacity_fees' => $capacity_fees,
-            'total_paid' => $total_paid,
-            'balance_amount' => $balance_amount
-        ];
-    }
-
-    return view('adminpanel.payments.index', compact('member_data'));
-}
 }

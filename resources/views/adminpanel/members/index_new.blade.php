@@ -9,15 +9,6 @@
                 <h3  style="font-family: 'Open Sans', serif !important;
         ">Manage Members</h3>
               </div>
-
-              <form action="{{ route('members.import') }}" method="POST" enctype="multipart/form-data" style="display:none;">
-    @csrf
-    <div class="form-group">
-        <label for="file">Import Excel File:</label>
-        <input type="file" name="file" class="form-control" required>
-    </div>
-    <button class="btn btn-success mt-2">Import</button>
-</form>
               <div class="col-sm-2 p-0">
                 <div class="overflow-hidden">
 

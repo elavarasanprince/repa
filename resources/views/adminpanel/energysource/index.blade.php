@@ -5,12 +5,12 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-sm-10 p-0">
-                    <h3>Energy Soruces</h3>
+                    <h3>Energy Sources</h3>
                 </div>
                 <div class="col-sm-2 p-0">
                     <div class="overflow-hidden">
                         <button class="btn  mx-auto mt-3" type="button" data-bs-toggle="modal"
-                                data-bs-target="#addModel"  style="background-color: #1B1F23; color: #ffffff; border: none;">Add Energy Soruces
+                                data-bs-target="#addModel"  style="background-color: #1B1F23; color: #ffffff; border: none;">Add Energy Sources
                                 </button>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content dark-sign-up">
             <div class="modal-header">
-                <h3 class="modal-title">Energy soruce Details</h3>
+                <h3 class="modal-title">Energy Sources Details</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -112,7 +112,7 @@
         <div class="modal-content dark-sign-up">
             <!-- Modal Header -->
             <div class="modal-header">
-                <h3 class="modal-title" id="editeventsLabel">Edit Energy soruce Details</h3>
+                <h3 class="modal-title" id="editeventsLabel">Edit Energy Sources Details</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 

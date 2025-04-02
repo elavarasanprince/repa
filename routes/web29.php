@@ -123,8 +123,6 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     ]);
 Route::post('/fees/store', [FeeController::class, 'store'])->name('fees.store');
 
-Route::post('/members/import', [MemberController::class, 'import'])->name('members.import');
-
     Route::get('/members/{id}', [MemberController::class, 'show'])->name('members.show');
 
     Route::post('/updateStatus', [FeeController::class, 'update'])->name('updateStatus');
@@ -135,7 +133,7 @@ Route::post('/members/import', [MemberController::class, 'import'])->name('membe
     
   Route::match(['put', 'post'], '/forecast/update', [ForecastActualController::class, 'update'])->name('forecast.update');
 
- Route::get('/payments', [MemberController::class, 'payments'])->name('payments');
+
 
 Route::delete('/forecast/delete/{id}', [ForecastActualController::class, 'destroy'])->name('forecast.delete');
 

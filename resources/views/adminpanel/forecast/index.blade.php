@@ -173,6 +173,8 @@
     </div>
 @endif
                 </div>
+				
+				
 
                 <div class="table-responsive custom-scrollbar">
 
@@ -225,7 +227,103 @@
 
                 <!-- Pagination at the bottom right side -->
 
+			
             </div>
+		<div class="limiter">
+		<div class="container-table100">
+			<h4 class="mb-5 text-black text-center">  Forecasted Solar Energy vs. Actual Evacuation
+
+</h4>
+
+
+			<div class="wrap-table100 mb-5">
+				
+						 <div class="table-responsive custom-scrollbar">
+
+
+               <table id="EventsTable1" class="table table-striped table-bordered">
+    <thead>
+        <tr class="table100-head">
+            <th>S/N</th>
+            <th>Date</th>
+            <th>Solar Energy <br>Forecasted <br>(in Mus)</th>
+            <th>Actual Evacuated<br> Energy as Reported <br>by TANGEDCO</th>
+            <th>Deviation<br> (In Mus) (+/-)</th>
+            <th>% of Deviation</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($forecasts as $index => $forecast)
+        <tr>
+            <td>{{ $index + 1 }}</td>
+            <td>{{ \Carbon\Carbon::parse($forecast->date)->format('d/m/Y') }}</td>
+            <td>{{ $forecast->forecasted_solar }}</td>
+            <td>{{ $forecast->actual_solar }}</td>
+
+            {{-- Calculate Deviation (Forecasted - Actual) --}}
+            @php
+                $deviation = $forecast->actual_solar - $forecast->forecasted_solar;
+                $percent_deviation = ($forecast->forecasted_solar != 0) 
+                    ? (($deviation / $forecast->forecasted_solar) * 100) 
+                    : 0;
+            @endphp
+
+            <td>{{ number_format($deviation, 2) }}</td>
+            <td>{{ number_format($percent_deviation, 2) }}%</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+
+				</div>
+			</div>
+	
+			<h4 class="mb-5 text-black text-center">  Forecasted Wind Energy vs. Actual Evacuation  
+
+</h4>
+			<div class="wrap-table100 mb-5">
+				 <div class="table-responsive custom-scrollbar">
+
+
+               <table id="EventsTable2" class="table table-striped table-bordered">
+    <thead>
+        <tr class="table100-head">
+            <th>S/N</th>
+            <th>Date</th>
+            <th>Wind Energy <br>Forecasted <br>(in Mus)</th>
+            <th>Actual Evacuated<br> Energy as Reported <br>by TANGEDCO</th>
+            <th>Deviation<br> (In Mus) (+/-)</th>
+            <th>% of Deviation</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($forecasts as $index => $forecast)
+        <tr>
+            <td>{{ $index + 1 }}</td>
+            <td>{{ \Carbon\Carbon::parse($forecast->date)->format('d/m/Y') }}</td>
+            <td>{{ $forecast->forecasted_wind }}</td>
+            <td>{{ $forecast->actual_wind }}</td>
+
+            {{-- Calculate Deviation (Forecasted - Actual) --}}
+            @php
+                $deviation = $forecast->actual_wind - $forecast->forecasted_wind;
+                $percent_deviation = ($forecast->forecasted_wind != 0) 
+                    ? (($deviation / $forecast->forecasted_wind) * 100) 
+                    : 0;
+            @endphp
+
+            <td>{{ number_format($deviation, 2) }}</td>
+            <td>{{ number_format($percent_deviation, 2) }}%</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+
+				</div>
+			</div>
+		</div>
+	</div>
+				
         </div>
     </div>
 </div>
@@ -333,9 +431,6 @@ $(document).on("submit", "#editeventsForm", function(e) {
     }
 </style>
 
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -346,6 +441,28 @@ $(document).on("submit", "#editeventsForm", function(e) {
             "info": true
         });
     });
+	
+	  $(document).ready(function () {
+        $('#EventsTable1').DataTable({
+            "paging": true,
+            "searching": true,
+            "ordering": true,
+            "info": true
+        });
+    });
+	
+	  $(document).ready(function () {
+        $('#EventsTable2').DataTable({
+            "paging": true,
+            "searching": true,
+            "ordering": true,
+            "info": true
+        });
+    });
+	
+
+	
+	 
 </script>
 
 <script>

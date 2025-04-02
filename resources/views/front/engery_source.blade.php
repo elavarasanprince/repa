@@ -60,7 +60,7 @@
                         <thead>
                         <tr class="table100-head">
   
-                <th>SNo</th>
+                <th>S/N</th>
                 <th>Date</th>
                 <th>Availability</th>
                 <th>Demand Met</th>

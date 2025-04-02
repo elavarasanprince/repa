@@ -119,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-			</div> </div>
+            </div>
     </section>
 
 
@@ -145,14 +145,6 @@
 </script>
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var preloader = document.getElementById("preloader");
-        if (preloader) {
-            preloader.style.display = "none"; // Hide preloader
-        }
-    });
-</script>
 
 </body>
 

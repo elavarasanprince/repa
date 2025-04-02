@@ -52,11 +52,13 @@
 
 
 			<div class="wrap-table100 mb-5">
-				<div class="table100">
-					 <table>
+				
+							<div class="table100 dt-layout-row">
+			    <table id="memberTable" class="table bordered-table dataTable mt-3" style="width: 100%;" aria-describedby="example_info">
+				
     <thead>
         <tr class="table100-head">
-            <th>SNo.</th>
+            <th>S/N</th>
             <th>Date</th>
             <th>Solar Energy <br>Forecasted <br>(in Mus)</th>
             <th>Actual Evacuated<br> Energy as Reported <br>by TANGEDCO</th>
@@ -94,11 +96,12 @@
 
 </h4>
 			<div class="wrap-table100 mb-5">
-				<div class="table100">
-					 <table>
+					<div class="table100 dt-layout-row">
+			    <table id="memberTable" class="table bordered-table dataTable mt-3" style="width: 100%;" aria-describedby="example_info">
+				
     <thead>
         <tr class="table100-head">
-            <th>SNo.</th>
+            <th>S/N</th>
             <th>Date</th>
             <th>Wind Energy <br>Forecasted <br>(in Mus)</th>
             <th>Actual Evacuated<br> Energy as Reported <br>by TANGEDCO</th>

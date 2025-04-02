@@ -206,13 +206,7 @@
                                  </div>
                                  <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                     <label class="label" for="loandetails01">Contact No. of the POC </label>
-                                    <div class="input-group mb-3">
-                                       <div class="input-group-prepend">
-                                          <span class="input-group-text" id="basic-addon1">+91</span>
-                                       </div>
                                     <input type="text" name="contact_poc" id="contact_poc" pattern="^[6789]\d{9}$" required="">
-                                    
-                                    </div>
                                  </div>
                                  <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                     <label class="label" for="loandetails01">E-Mail ID of the POC
@@ -235,12 +229,7 @@
 
                                  <div class="col-lg-6 col-md-6 col-sm-12 form-group" id="whatsappContactDiv" style="display: none;">
                                     <label class="label" for="wscontact">If Yes, Please Provide his WhatsApp No.</label>
-                                    <div class="input-group mb-3">
-                                       <div class="input-group-prepend">
-                                          <span class="input-group-text" id="basic-addon1">+91</span>
-                                       </div>
                                     <input type="text" name="wscontact_poc" id="wscontact" pattern="^[6789]\d{9}$" class="form-control">
-                                    </div>
                                  </div>
 
                                  <script>
@@ -287,12 +276,7 @@
                                  </div>
                                  <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                     <label class="label" for="loandetails01">Contact No. of the SPOC </label>
-                                    <div class="input-group mb-3">
-                                       <div class="input-group-prepend">
-                                          <span class="input-group-text" id="basic-addon1">+91</span>
-                                       </div>
                                     <input type="text" name="contact_spoc" id="contact_spoc" pattern="^[6789]\d{9}$" required="">
-                                    </div>
                                  </div>
                                  <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                     <label class="label" for="loandetails01">E-Mail ID of the SPOC
@@ -315,12 +299,7 @@
 
                                  <div class="col-lg-6 col-md-6 col-sm-12 form-group" id="whatsappSecondaryDiv" style="display: none;">
                                     <label class="label" for="wspcontact">If Yes, Please Provide his WhatsApp No.</label>
-                                    <div class="input-group mb-3">
-                                       <div class="input-group-prepend">
-                                          <span class="input-group-text" id="basic-addon1">+91</span>
-                                       </div>
                                     <input type="text" name="wspcontact" id="wspcontact" pattern="^[6789]\d{9}$" class="form-control">
-                                    </div>
                                  </div>
 
                                  <script>
@@ -396,7 +375,7 @@
          justified: true, // Nav menu justification. true/false
          autoAdjustHeight: false, // Automatically adjust content height
          backButtonSupport: true, // Enable back button support
-         enableUrlHash: false,
+         enableUrlHash: false, // Enable step selection based on the URL hash (e.g., #step-2)
          color: 'green', // Corrected from Colors to color
          transition: {
             animation: 'none', // Animation effect on navigation: none|fade|slideHorizontal|slideVertical|slideSwing|css
@@ -461,25 +440,22 @@
 
 
       // Ensure validation before moving to the next step
-      // $('#smartwizard').on('leaveStep', function(e, anchorObject, stepIndex, stepDirection) {
-      //    // Check the validity of the form on each step
-      //    var isValid = $("#myForm").valid();
-      //    if (!isValid) {
-      //       e.preventDefault(); // Prevent step change if form is invalid
-      //    }
-      // });
-      $(document).ready(function() {
-            $('html, body').animate({ scrollTop: 0 }, 0); // Scroll to top immediately after page load
-        });
-  
-      // // Prevent default scroll behavior when moving to the next step
-      $('#smartwizard').on('showStep', function( anchorObject, stepIndex, stepDirection) {
-         $('html, body').animate({
-            scrollTop: $("#smartwizard").offset().top - 200 // Adjust for any header or space
-         }, 200); // Smooth scroll to the top of the wizard container (optional)
+      $('#smartwizard').on('leaveStep', function(e, anchorObject, stepIndex, stepDirection) {
+         // Check the validity of the form on each step
+         var isValid = $("#myForm").valid();
+         if (!isValid) {
+            e.preventDefault(); // Prevent step change if form is invalid
+         }
       });
-    
-      
+
+      // // Prevent default scroll behavior when moving to the next step
+      // $('#smartwizard').on('showStep', function(event, anchorObject, stepIndex, stepDirection) {
+      //    $('html, body').animate({
+      //       scrollTop: $("#smartwizard").offset().top - 200 // Adjust for any header or space
+      //    }, 200); // Smooth scroll to the top of the wizard container (optional)
+      // });
+
+
       // Function to toggle visibility of the WhatsApp input field based on the radio selection
       function toggleWhatsAppInput(isYesSelected) {
          var whatsappInputDiv = document.getElementById("whatsappInputDiv");

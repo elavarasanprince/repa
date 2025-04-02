@@ -16,6 +16,7 @@ use App\Models\Forms;
 use App\Models\Comments;
 use App\Models\Fees;
 use App\Models\LatestNews;
+use Carbon\Carbon;
 
 use App\Models\AnnualReport;
 use DB;
@@ -198,7 +199,9 @@ public function showprofile()
 
 public function welcome() 
 {
-    $energySources = EnergySource::latest('date')->first();
+    //$energySources = EnergySource::latest('date')->first();
+	
+	  $energySources = EnergySource::whereDate('date', Carbon::today())->first();
     $latestNews = LatestNews::get();
     
 
@@ -225,7 +228,7 @@ public function welcome()
         'values' => $values
     ];
 
-    $availabilityDemandmet = AvailabilityDemandmet::latest('date')->first();
+   $availabilityDemandmet = AvailabilityDemandmet::whereDate('date', Carbon::today())->first();
 
     $Events = Event::get();
     //$Circular = Circular::get();
@@ -246,8 +249,8 @@ public function welcome()
     ->get();
 
     // Fetch forecast vs actuals data
-    $forecastData = ForecastActuals::latest('date')->first();
-    
+  //  $forecastData = ForecastActuals::latest('date')->first();
+      $forecastData = ForecastActuals::whereDate('date', Carbon::today())->first();
     $memberscount=User::where('status','active')->where('user_type','member')->count();
     
 //$totalre=Fees::where('status','active')->sum('total');

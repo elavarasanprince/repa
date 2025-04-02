@@ -141,7 +141,7 @@ function toggleSubMenu(element) {
                     <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title link-nav" href="{{ route('energysource.index') }}">
                             <i class="fas fa-bolt" style="color: #ffffff; font-size: 18px;"></i> <!-- Appointment Icon -->
-                            <span style="font-family: 'Open Sans', serif !important;">Energy Soruces
+                            <span style="font-family: 'Open Sans', serif !important;">Energy Sources
                             </span>
                             <div class="according-menu">
                                 <i class="fa fa-angle-right"></i>
@@ -175,15 +175,15 @@ function toggleSubMenu(element) {
                         </a>
                     </li>
 
-                    <!--<li class="sidebar-list">-->
-                    <!--    <a class="sidebar-link sidebar-title link-nav" href="">-->
-                    <!--        <i class="fa fa-credit-card" style="color: #ffffff; font-size: 18px;"></i> <!-- Products Icon -->-->
-                    <!--        <span style="font-family: 'Open Sans', serif !important;">Payments</span>-->
-                    <!--        <div class="according-menu">-->
-                    <!--            <i class="fa fa-angle-right"></i>-->
-                    <!--        </div>-->
-                    <!--    </a>-->
-                    <!--</li>-->
+                <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav" href="{{ route('payments') }}">
+                            <i class="fa fa-credit-card" style="color: #ffffff; font-size: 18px;"></i> <!-- Products Icon -->
+                            <span style="font-family: 'Open Sans', serif !important;">Payments</span>
+                            <div class="according-menu">
+                                <i class="fa fa-angle-right"></i>
+                            </div>
+                        </a>
+                    </li>
 
                     <!--<li class="sidebar-list">-->
                     <!--    <a class="sidebar-link sidebar-title link-nav" href="">-->

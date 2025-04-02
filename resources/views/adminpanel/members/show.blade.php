@@ -456,7 +456,7 @@
 </select>
 <div id="remarkField" style="display: none; margin-top: 10px;">
     <label for="remark">Remark</label>
-    <input type="text" id="remark" name="remark" value="{{ $members->user->remark}}" class="form-control">
+    <input type="text" id="remark" name="remark" value="{{ $members->user?->remark }}" class="form-control">
 </div>
 
 

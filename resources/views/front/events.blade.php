@@ -88,7 +88,7 @@ $events = DB::table('events')->get();
 
            </div>
 
-        </div>
+     
     </section>
 
     @include('includes.footer')

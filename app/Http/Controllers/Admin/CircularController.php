@@ -143,7 +143,7 @@ public function commentsview($id)
             'status' => $request->status
         ]);
 
-        return redirect()->route('circular.commentsindex')->with('success', 'Circular added successfully!');
+        return redirect()->route('circular.commentsindex')->with('success', 'Representations / Comments added successfully!');
     }
     public function formstore(Request $request) {
       

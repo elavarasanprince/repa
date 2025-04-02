@@ -15,7 +15,7 @@
 
     @include('includes.header')
 
-    <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.jpg');">
+    <div class="breadcrumb-wrapper bg-cover" >
         <!-- <div class="border-shape">
                 <img src="assets/img/element.png" alt="shape-img">
             </div> -->
@@ -117,8 +117,15 @@
     @include('includes.footer')
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var preloader = document.getElementById("preloader");
+        if (preloader) {
+            preloader.style.display = "none"; // Hide preloader
+        }
+    });
+</script>
 
-@include('includes.script')
 
 
 

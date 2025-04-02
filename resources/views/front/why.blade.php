@@ -43,7 +43,7 @@
                         <i class="fas fa-chevron-right"></i>
                     </li>
                     <li>
-                        Objectives of REPA
+                    Objectives of REPA
                     </li>
                 </ul>
             </div>
