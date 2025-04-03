@@ -971,7 +971,9 @@
                     
                     @foreach ($Events as $event)
     <div class="swiper-slide">
+
         <a href="{{ route('event_details', ['id' => $event->id]) }}">
+
         <div class="news-card-items">
             <div class="news-image">
                 <img src="{{ asset('storage/app/public/' . $event->cover_image) }}" alt="COVER IMAGE">
@@ -983,28 +985,26 @@
                 </div>
             </div>
             <div class="news-content">
-            <ul>
-                                    {{-- <li>
-                                        <i class="fa-regular fa-user"></i>
-                                        By Admin
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-tag"></i>
-                                        REPA Launch
-                                    </li> --}}
-                                </ul>
+         
+                
+                <a href="{{ route('event_details', ['id' => $event->id]) }}" class="theme-btn-2 mt-3">
+
                 <h3>
                     <a href="{{ route('event_details', ['id' => $event->id]) }}">
                         {{ $event->title }}
                     </a>
                 </h3>
                 <a href="{{ route('event_details', ['id' => $event->id]) }}" class="theme-btn-2 mt-3">
+
                         Read More
                         <i class="fa-solid fa-arrow-right-long"></i>
-                    </a>
+                </a>
+				</a>
             </div>
         </div>
+
         </a>
+
     </div>
 @endforeach
 
