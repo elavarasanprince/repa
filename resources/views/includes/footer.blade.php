@@ -216,7 +216,7 @@ $circulars = DB::table('circulars')
                         </p>
                         <ul class="footer-menu wow fadeInRight" data-wow-delay=".5s">
                             <li>
-                                <a href="{{url('REPA_Privacy_Policy.pdf')}}">
+                                <a href="{{ asset('REPA_Privacy_Policy.pdf') }}" target="_blank">
                                     Terms & Condition
                                 </a>
                             </li>
