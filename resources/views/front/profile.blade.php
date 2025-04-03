@@ -61,7 +61,11 @@
                             <!--    <span class="profile-image position-relative"> <img class="br-5" alt="" src="https://spruko.com/demo/nowa/dist/assets/images/faces/profile.jpg" /> <span class="bg-success text-white wd-1 ht-1 rounded-pill profile-online"></span> </span>-->
                             <!--</div>-->
                             <div class="my-md-auto mt-4 prof-details">
-                                <h4 class="font-weight-semibold ms-md-4 ms-0 mb-3 pb-0">Name: {{ Auth::user()->name }}</h4>
+
+                            <h4 class="font-weight-semibold ms-md-4 ms-0 mb-3 pb-0">
+    Name: {{ Auth::user()->memberReg->oftheCompany ?? 'Not Available' }}
+</h4>
+
 
                                 <p class="text-muted ms-md-4 ms-0 mb-2">
                                     <span><i class="fa fa-phone me-2"></i></span><span class="font-weight-semibold text me-2">Phone:</span><span>{{ $profile->contactno }}</span>
@@ -117,13 +121,7 @@
 </h4>
 
 <div class="button-group d-flex ms-auto">
-@if($profile->fees->isNotEmpty() && $profile->fees->first()->status == 'active') 
-    <span class="badge bg-primary text-white p-2">APPROVED</span>
-    @elseif($profile->fees->isNotEmpty() && $profile->fees->first()->status == 'pending') 
-    <span class="badge bg-warning  text-white p-2">Pending</span>
-@else
-    <span class="badge bg-danger text-white p-2">Denied</span>
-@endif
+
 
 </div>
 
@@ -205,10 +203,7 @@
                 <td>{{ $profile->father_name }}</td>
             </tr>
 
-            <tr>
-                <th>Aadhar Number</th>
-                <td>{{ $profile->aadhar_number   }}</td>
-            </tr>
+
             <tr>
                 <th>Designation</th>
                 <td>{{ $profile->designation }}</td>
@@ -520,13 +515,7 @@
                
             </tr>
 
-            <tr>
-                <th>Aadhar Number</th>
-                <td>
-<input type="text" class="form-control" name="aadhar_number" value="{{ $profile->aadhar_number }}">
-                    
-                    </td>
-            </tr>
+
             <tr>
                 <th>Designation</th>
                 
@@ -939,7 +928,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <button class="btn btn-primary-light btn-icon btn-sm"><i class="fa-solid fa-download"></i></button>
-                                                                    <button class="btn btn-danger-light btn-icon ms-1 btn-sm invoice-btn"><i class="fa-solid fa-eye"></i></button>
+
                                                                 </td>
                                                             </tr>
                                                             <tr class="invoice-list">
@@ -975,7 +964,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <button class="btn btn-primary-light btn-icon btn-sm"><i class="fa-solid fa-download"></i></button>
-                                                                    <button class="btn btn-danger-light btn-icon ms-1 btn-sm invoice-btn"><i class="fa-solid fa-eye"></i></button>
+
                                                                 </td>
                                                             </tr>
                                                             <tr class="invoice-list">
@@ -1011,7 +1000,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <button class="btn btn-primary-light btn-icon btn-sm"><i class="fa-solid fa-download"></i></button>
-                                                                    <button class="btn btn-danger-light btn-icon ms-1 btn-sm invoice-btn"><i class="fa-solid fa-eye"></i></button>
+
                                                                 </td>
                                                             </tr>
                                                             <tr class="invoice-list">
@@ -1047,7 +1036,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <button class="btn btn-primary-light btn-icon btn-sm"><i class="fa-solid fa-download"></i></button>
-                                                                    <button class="btn btn-danger-light btn-icon ms-1 btn-sm invoice-btn"><i class="fa-solid fa-eye"></i></button>
+
                                                                 </td>
                                                             </tr>
 

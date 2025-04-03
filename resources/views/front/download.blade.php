@@ -113,7 +113,9 @@ $circulars = DB::table('circulars')
                                                     <div class=" news-content-1">
                                                         <h6>
                                                             <img src="{{ asset('assets/img/word.png') }}" class="pdf-label" alt="pdf">
-                                                            {{ basename($circular->name) }} 
+
+                                                            {{ ($circular->name) }} 
+
                                                             @if($circular->is_new == '1')
                                                                 <span class="new-label">New</span>
                                                             @endif
@@ -145,10 +147,12 @@ $forms = DB::table('forms')->orderBy('created_at', 'desc')->where('status','acti
 <div class="col-md-10 m-auto">
                          
                          
-                      <table id="FormTable" class="" style="color:#fff;">
+
+<table id="memberTable" class="table bordered-table dataTable mt-3" style="width: 100%;" aria-describedby="example_info">
     <thead>
         <tr>
-            <th>SNo.</th>
+            <th>S/N</th>
+
             <th>Form Name</th>
             <th>Download</th>
         </tr>
@@ -218,10 +222,13 @@ $annual = DB::table('annualreport')->orderBy('created_at', 'desc')->take(10)->wh
 <div class="col-md-10 m-auto">
                          
                          
-                      <table id="AnnualTable" class="" style="color:#fff;">
+
+<table id="AnnualTable" class="table bordered-table dataTable mt-3" style="width: 100%;" aria-describedby="example_info">
     <thead>
         <tr>
-            <th>SNo.</th>
+            <th>S/N</th>
+
+                    
             <th> Name</th>
             <th>Download</th>
         </tr>
@@ -286,7 +293,9 @@ $comments = DB::table('comments')
                 <div class="news-content news-content-1">
                     <h6>
                         <img src="{{ asset('assets/img/word.png') }}" class="pdf-label" alt="pdf">
-                        {{ basename($comments->pdf) }} 
+
+                        {{($comments->pdf) }} 
+
                         @if($comments->is_new == '1')
                             <span class="new-label">New</span>
                         @endif

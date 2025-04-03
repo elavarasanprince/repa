@@ -1894,13 +1894,7 @@ span {
   background-position: top;
   background-attachment: fixed;
 }
-/*.achievement-wrapper .section-title{
-  background: url('../img/section-bg.jpg');
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-position: top;
-  background-attachment: fixed;
-} */
+
 @media (max-width: 1399px) {
   .achievement-section-3 .shape-image {
     display: none;
@@ -2372,7 +2366,7 @@ span {
 }
 
 .footer-widgets-wrapper {
-  /* padding: 90px 0 120px; */
+
   position: relative;
   z-index: 9;
 }
@@ -2600,10 +2594,12 @@ span {
   .content
   h6 {
   font-size: 16px;
+
 	  -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     display: -webkit-box;
+
 }
 .footer-widgets-wrapper
   .single-footer-widget
@@ -6996,7 +6992,9 @@ input.main-search-input::placeholder {
   }
 }
 .section-title span {
+
   color: #80c118;
+
   margin-bottom: 10px;
   display: inline-block;
   font-weight: 500;
@@ -9639,10 +9637,12 @@ transition: width 3s ease;
 }
 .news-content h3 a{
   text-transform: initial;
+
 	    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     display: -webkit-box;
+
 }
 .counter-items .icon{
   text-align: center;
