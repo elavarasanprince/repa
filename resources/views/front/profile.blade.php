@@ -61,9 +61,11 @@
                             <!--    <span class="profile-image position-relative"> <img class="br-5" alt="" src="https://spruko.com/demo/nowa/dist/assets/images/faces/profile.jpg" /> <span class="bg-success text-white wd-1 ht-1 rounded-pill profile-online"></span> </span>-->
                             <!--</div>-->
                             <div class="my-md-auto mt-4 prof-details">
+
                             <h4 class="font-weight-semibold ms-md-4 ms-0 mb-3 pb-0">
     Name: {{ Auth::user()->memberReg->oftheCompany ?? 'Not Available' }}
 </h4>
+
 
                                 <p class="text-muted ms-md-4 ms-0 mb-2">
                                     <span><i class="fa fa-phone me-2"></i></span><span class="font-weight-semibold text me-2">Phone:</span><span>{{ $profile->contactno }}</span>
@@ -201,7 +203,7 @@
                 <td>{{ $profile->father_name }}</td>
             </tr>
 
-            
+
             <tr>
                 <th>Designation</th>
                 <td>{{ $profile->designation }}</td>
@@ -513,7 +515,7 @@
                
             </tr>
 
-           
+
             <tr>
                 <th>Designation</th>
                 
@@ -926,7 +928,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <button class="btn btn-primary-light btn-icon btn-sm"><i class="fa-solid fa-download"></i></button>
-                                                                  
+
                                                                 </td>
                                                             </tr>
                                                             <tr class="invoice-list">
@@ -962,7 +964,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <button class="btn btn-primary-light btn-icon btn-sm"><i class="fa-solid fa-download"></i></button>
-                                                                  
+
                                                                 </td>
                                                             </tr>
                                                             <tr class="invoice-list">
@@ -998,7 +1000,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <button class="btn btn-primary-light btn-icon btn-sm"><i class="fa-solid fa-download"></i></button>
-                                                                  
+
                                                                 </td>
                                                             </tr>
                                                             <tr class="invoice-list">
@@ -1034,7 +1036,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <button class="btn btn-primary-light btn-icon btn-sm"><i class="fa-solid fa-download"></i></button>
-                                                                   
+
                                                                 </td>
                                                             </tr>
 

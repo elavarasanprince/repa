@@ -62,9 +62,12 @@
                         <!--</div>-->
                         <div class="col-lg-8">
                             <div class="con-info">
+
                             <span class="degr">{{ $profile->oftheCompany}}</span>
                                 <span class="designation-info">{{ $profile->designation}}</span>
                                 <h2 class="title"> {{ $profile->member_name}} <br></h2>
+
+
 
                                 <div class="ps-informations">
 

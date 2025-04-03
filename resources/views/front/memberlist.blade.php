@@ -73,7 +73,9 @@
         <th>{{ $index + 1 }}</th>
         <td>
             <a href="{{ route('membershow', $m->id) }}" class="member-link">
+
                 {{ $m->oftheCompany }}
+
             </a>
         </td> 
     </tr>

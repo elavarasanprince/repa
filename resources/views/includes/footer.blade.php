@@ -176,7 +176,9 @@ $circulars = DB::table('circulars')
                         <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                         <div class="single-footer-widget style-margin">
                                 <div class="widget-head">
-                                    <h3>Recent Posts</h3>
+
+                                    <h3>Recent Circulars</h3>
+
                                 </div>
                                 <div class="recent-post-area">
     @foreach($circulars as $circular)
@@ -216,12 +218,16 @@ $circulars = DB::table('circulars')
                         </p>
                         <ul class="footer-menu wow fadeInRight" data-wow-delay=".5s">
                             <li>
-                                <a href="contact.html">
+
+                                <a href="{{url('REPA_Privacy_Policy.pdf')}}">
+
                                     Terms & Condition
                                 </a>
                             </li>
                             <li>
-                                <a href="contact.html">
+
+                                <a href="{{url('REPA_Terms & Conditions.pdf')}}">
+
                                     Privacy Policy
                                 </a>
                             </li>
@@ -239,9 +245,11 @@ $circulars = DB::table('circulars')
         title: "Success!",
         text: "{{ session('success') }}",
         icon: "success",
+
         showConfirmButton: false,  // Hide "OK" button
         timer: 2000  // Auto-close after 3 seconds
     });
 </script>
+
 
 @endif

@@ -48,8 +48,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
     public function memberReg()
 {
     return $this->belongsTo(MemberReg::class, 'member_reg_id', 'id');
 }
+
 }
