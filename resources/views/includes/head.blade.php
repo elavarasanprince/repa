@@ -32,3 +32,5 @@
 <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 <!--<< Main.css >>-->
 <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.bootstrap5.css">

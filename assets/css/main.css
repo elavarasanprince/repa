@@ -11029,7 +11029,7 @@ tbody tr:hover {
 .bordered-table {
   border-spacing: 0;
   border-collapse: separate;
-  /* border: 1px solid #ebecef; */
+  border: 1px solid #ebecef;
   border-radius: 8px;
   min-width: max-content;
   vertical-align: middle;
@@ -11096,6 +11096,11 @@ table th td{
   font-family: 'Kumbh Sans';
   text-align: center;
 }
+.wrap-table100 .memberTable.bordered-table tbody tr td {
+ 
+  text-align: left !important;
+}
+
 .bordered-table tbody tr td {
   color: #4b5563;
   padding: 16px !important;
@@ -11165,3 +11170,9 @@ table.dataTable tbody th, table.dataTable tbody td {
   background: -o-linear-gradient(top, white 0%, #dcdcdc 100%) !important;
   background: #80c118 !important;
 }
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+ 
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+

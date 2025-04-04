@@ -58,7 +58,7 @@
 
 </h4>
 			<div class="table100 dt-layout-row">
-			    <table id="memberTable" class="table bordered-table dataTable mt-3" style="width: 100%;" aria-describedby="example_info">
+			    <table id="memberTable" class="memberTable table table-striped bordered-table dataTable mt-3 " style="width: 100%;" aria-describedby="example_info">
    
         <thead>
             <tr class="">
@@ -73,7 +73,9 @@
         <th>{{ $index + 1 }}</th>
         <td>
             <a href="{{ route('membershow', $m->id) }}" class="member-link">
-                {{ $m->member_name }}
+
+                {{ $m->oftheCompany }}
+
             </a>
         </td> 
     </tr>

@@ -46,7 +46,7 @@
 
     <div class="limiter">
 		<div class="container-table100">
-			<h4 class="mb-5 text-white text-center">  Forecasted Solar Energy vs. Actual Evacuation ({{ $fromDateFormatted }} to {{ $toDateFormatted }})
+			<h4 class="mb-5 text-center">  Forecasted Solar Energy vs. Actual Evacuation ({{ $fromDateFormatted }} to {{ $toDateFormatted }})
 
 </h4>
 
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 	
-			<h4 class="mb-5 text-white text-center">  Forecasted Wind Energy vs. Actual Evacuation  ({{ $fromDateFormatted }} to {{ $toDateFormatted }})
+			<h4 class="mb-5 text-center">  Forecasted Wind Energy vs. Actual Evacuation  ({{ $fromDateFormatted }} to {{ $toDateFormatted }})
 
 </h4>
 			<div class="wrap-table100 mb-5">
