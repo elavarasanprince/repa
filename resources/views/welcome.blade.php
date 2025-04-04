@@ -948,9 +948,6 @@
         </div>
     </section>
 
-
-
-
     <!-- News Section Start -->
     <section class="news-section fix ptb-50">
         <div class="container">
