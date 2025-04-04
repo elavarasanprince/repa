@@ -100,7 +100,7 @@
 			    <table id="memberTable" class="table bordered-table dataTable mt-3" style="width: 100%;" aria-describedby="example_info">
 				
     <thead>
-        <tr class="table100-head">
+        <tr class="table100-head forcastactuals">
             <th>S/N</th>
             <th>Date</th>
             <th>Wind Energy <br>Forecasted <br>(in Mus)</th>
