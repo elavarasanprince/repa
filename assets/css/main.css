@@ -10797,11 +10797,11 @@ header#pt-header .pt-bottom-header.inner-head .navbar .navbar-nav li {
 .container-table100 {
   width: 100%;
   /* min-height: 100vh; */
-  background: #8BC34A;
+  /* background: #8BC34A;
   background: -webkit-linear-gradient(45deg, #2196F3, #8BC34A);
   background: -o-linear-gradient(45deg, #2196F3, #8BC34A);
   background: -moz-linear-gradient(45deg, #2196F3, #8BC34A);
-  background: linear-gradient(45deg, #2196F3, #8BC34A);
+  background: linear-gradient(45deg, #2196F3, #8BC34A); */
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -10859,7 +10859,7 @@ table td.r, table th.r {
 
 
 .table100-head th{
-  font-family: OpenSans-Regular;
+  font-family: 'Kumbh Sans';
   font-size: 18px;
   color: #fff;
   line-height: 1.2;
@@ -10871,7 +10871,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr {
-  font-family: OpenSans-Regular;
+     font-family: 'Kumbh Sans';
   font-size: 18px;
   color: #000000b0;
   line-height: 1.2;
@@ -10936,7 +10936,7 @@ tbody tr:hover {
     margin-bottom: 0;
   }
   table tbody tr td:before {
-    font-family: OpenSans-Regular;
+       font-family: 'Kumbh Sans';
     font-size: 14px;
     color: #999999;
     line-height: 1.2;
@@ -11087,6 +11087,15 @@ table.dataTable th.dt-center, table.dataTable td.dt-center, table.dataTable td.d
 table th td{
   font-family: 'Kumbh Sans';
 }
+.wrap-table100 .bordered-table tbody tr td {
+  color: #4b5563;
+  padding: 16px !important;
+  border-bottom: 1px solid #ebecef;
+  background-color: #fff;
+  vertical-align: middle;
+  font-family: 'Kumbh Sans';
+  text-align: center;
+}
 .bordered-table tbody tr td {
   color: #4b5563;
   padding: 16px !important;
@@ -11124,35 +11133,35 @@ table.dataTable tbody th, table.dataTable tbody td {
 }
 .paginate_button.current{
   color: #ffffff !important;
-    border: 1px solid #80c118;
-    background-color: white;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #dcdcdc));
-    background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: -o-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: #80c118;
+    border: 1px solid #80c118 !important;
+    background-color: white !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #dcdcdc)) !important;
+    background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%) !important;
+    background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%)!important;
+    background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%) !important;
+    background: -o-linear-gradient(top, white 0%, #dcdcdc 100%) !important;
+    background: #80c118 !important;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:active {
   color: #ffffff !important;
-    border: 1px solid #80c118;
-    background-color: white;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #dcdcdc));
-    background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: -o-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: #80c118;
+  border: 1px solid #80c118 !important;
+  background-color: white !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #dcdcdc)) !important;
+  background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%) !important;
+  background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%)!important;
+  background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%) !important;
+  background: -o-linear-gradient(top, white 0%, #dcdcdc 100%) !important;
+  background: #80c118 !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
   color: #ffffff !important;
-    border: 1px solid #80c118;
-    background-color: white;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #dcdcdc));
-    background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: -o-linear-gradient(top, white 0%, #dcdcdc 100%);
-    background: #80c118;
+  border: 1px solid #80c118 !important;
+  background-color: white !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #dcdcdc)) !important;
+  background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%) !important;
+  background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%)!important;
+  background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%) !important;
+  background: -o-linear-gradient(top, white 0%, #dcdcdc 100%) !important;
+  background: #80c118 !important;
 }
