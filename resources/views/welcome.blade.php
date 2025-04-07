@@ -32,8 +32,7 @@
     height: 30px;
     position: relative;
     overflow: hidden;
-    /*display: flex;*/
-    /*align-items: center;*/
+  
 }
 
 .progress-fill {
@@ -152,9 +151,9 @@
     
         <a href="{{ $news->link }}" target="_blank" rel="noopener noreferrer">
     <span class="text-slider">{{ $news->title }}</span>
-</a>
+</a> &nbsp;&nbsp;&nbsp;
 
-        <span class="text-slider"><img src="{{ asset('assets/img/star.svg') }}" alt="img"></span>
+        <span class="text-slider"><img src="{{ asset('assets/img/star.svg') }}" alt="img"></span> &nbsp;&nbsp;&nbsp;
    
 </li> @endforeach
 
@@ -168,7 +167,7 @@
     <!-- About Section Start -->
     <section class="about-section section-padding fix bg-cover" id="about-us">
         <div class="container">
-            <div class="about-wrapper-2 mb-0">
+            <div class="about-wrapper-2 mb-5">
                 <div class="row align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
                         <div class="about-image">
@@ -283,46 +282,58 @@
                         Key insights on REPA capacities
                     </h2>
                 </div>
-                <div class="row">
-                    <div class="counter-area">
-                        <div class="counter-items wow fadeInUp" data-wow-delay=".3s">
-                            <div class="icon">
-                                <img src="assets/img/icons/team.png" alt="icon-img">
-                            </div>
-                            <div class="content">
-                                <h2><span class="count">{{$memberscount}}</span>+</h2>
-                                <p> Members
-                                </p>
-                            </div>
-                        </div>
-                        <div class="counter-items wow fadeInUp" data-wow-delay=".5s">
-                            <div class="icon">
-                                <img src="assets/img/icons/total-energy.png" alt="icon-img">
-                            </div>
-                            <div class="content">
-                                <h2><span class="count">{{$totalre}} </span>+<span class="mw-text">MW</span> </h2>
-                                <p>Total RE capacity</p>
+                <div class="row mt-40">
+
+                        <div class="col-lg-3">
+                            <div class="counter-items wow fadeInUp" data-wow-delay=".3s">
+                                <div class="icon">
+                                    <img src="assets/img/icons/team.png" alt="icon-img">
+                                </div>
+                                <div class="content">
+                                    <h2><span class="count">{{$memberscount}}</span>+</h2>
+                                    <p> Members
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="counter-items wow fadeInUp" data-wow-delay=".7s">
-                            <div class="icon">
-                                <img src="assets/img/icons/wind-mill.png" alt="icon-img">
-                            </div>
-                            <div class="content">
-                                <h2><span class="count">{{$wind_energy}}</span>+<span class="mw-text">MW</span></h2>
-                                <p> Wind Energy</p>
-                            </div>
-                        </div>
-                        <div class="counter-items wow fadeInUp" data-wow-delay=".9s">
-                            <div class="icon">
-                                <img src="assets/img/icons/solar-panel.png" alt="icon-img">
-                            </div>
-                            <div class="content">
-                                <h2><span class="count">{{$totalsolar}}</span>+<span class="mw-text">MW</span></h2>
-                                <p>Solar Energy</p>
+                        <div class="col-lg-3">
+                            <div class="counter-items wow fadeInUp" data-wow-delay=".5s">
+                                <div class="icon">
+                                    <img src="assets/img/icons/total-energy.png" alt="icon-img">
+                                </div>
+                                <div class="content">
+                                    <h2><span class="count">{{$totalre}} </span>+<span class="mw-text">MW</span> </h2>
+                                    <p>Total RE capacity</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="col-lg-3">
+                            <div class="counter-items wow fadeInUp" data-wow-delay=".7s">
+                                <div class="icon">
+                                    <img src="assets/img/icons/wind-mill.png" alt="icon-img">
+                                </div>
+                                <div class="content">
+                                    <h2><span class="count">{{$wind_energy}}</span>+<span class="mw-text">MW</span></h2>
+                                    <p> Wind Energy</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="counter-items wow fadeInUp" data-wow-delay=".9s">
+                                <div class="icon">
+                                    <img src="assets/img/icons/solar-panel.png" alt="icon-img">
+                                </div>
+                                <div class="content">
+                                    <h2><span class="count">{{$totalsolar}}</span>+<span class="mw-text">MW</span></h2>
+                                    <p>Solar Energy</p>
+                                </div>
+                            </div>
+                        </div>
+                     
+                      
+                     
+                  
+                   
                 </div>
                
             </div>

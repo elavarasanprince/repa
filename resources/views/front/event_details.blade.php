@@ -29,7 +29,7 @@
                 <h1 class="wow fadeInUp" data-wow-delay=".3s">Event Details</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
-                        <a href="index.php">
+                        <a href="{{url('/')}}">
                             Home
                         </a>
                     </li>
@@ -37,7 +37,7 @@
                         <i class="fas fa-chevron-right"></i>
                     </li>
                     <li>
-                        <a href="event.php">
+                        <a href="{{url('/event')}}">
                             Event
                         </a>
                     </li>

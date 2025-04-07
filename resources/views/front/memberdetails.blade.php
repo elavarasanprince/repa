@@ -41,7 +41,8 @@
                         <i class="fas fa-chevron-right"></i>
                     </li>
                     <li>
-                        Members
+                        <a href="{{url('/members')}}">   Members</a>
+                     
                     </li>
                     <li>
                         <i class="fas fa-chevron-right"></i>
@@ -129,8 +130,9 @@
                 <div class="commen-btn text-center">
                     <a href="{{url('/members')}}" class="them-btn">
                         <span>
+                            <i class="fa-solid fa-arrow-left-long"></i>
                         Back to Member List 
-                        <i class="fa-solid fa-arrow-left-long"></i>
+                       
                     </span>
                 </a>
         </div>

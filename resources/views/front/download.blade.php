@@ -113,7 +113,9 @@ $circulars = DB::table('circulars')
                                                     <div class=" news-content-1">
                                                         <h6>
                                                             <img src="{{ asset('assets/img/word.png') }}" class="pdf-label" alt="pdf">
-                                                            {{ basename($circular->name) }} 
+
+                                                            {{ ($circular->name) }} 
+
                                                             @if($circular->is_new == '1')
                                                                 <span class="new-label">New</span>
                                                             @endif
@@ -142,13 +144,15 @@ $circulars = DB::table('circulars')
 $forms = DB::table('forms')->orderBy('created_at', 'desc')->where('status','active')->take(10)->get();
 @endphp
 
-<div class="col-md-10 m-auto">
+<div class="table100 dt-layout-row">
                          
                          
-                      <table id="FormTable" class="" style="color:#fff;">
+
+<table id="memberTable" class="table bordered-table dataTable mt-3" style="width: 100%;" aria-describedby="example_info">
     <thead>
         <tr>
-            <th>SNo.</th>
+            <th>S/N</th>
+
             <th>Forms Name</th>
             <th>Download</th>
         </tr>
@@ -215,13 +219,14 @@ $forms = DB::table('forms')->orderBy('created_at', 'desc')->where('status','acti
 $annual = DB::table('annualreport')->orderBy('created_at', 'desc')->take(10)->where('status','active')->get();
 @endphp
 
-<div class="col-md-10 m-auto">
+<div class="table100 dt-layout-row">
                          
                          
-                      <table id="AnnualTable" class="" style="color:#fff;">
+
+<table id="AnnualTable" class="table bordered-table dataTable mt-3" style="width: 100%;" aria-describedby="example_info">
     <thead>
         <tr>
-            <th>SNo.</th>
+            <th>S/N</th>  
             <th> Name</th>
             <th>Download</th>
         </tr>
@@ -270,7 +275,7 @@ $comments = DB::table('comments')
 
                             <div class="col-lg-8">
                              @foreach($comments as $comments)
-    <div class="circulars-item no-border">
+    <div class="circulars-item">
         @if(auth()->check()) 
             <a href="{{ asset('storage/app/public/' . $comments->pdf) }}" target="_blank">
         @else
@@ -281,12 +286,15 @@ $comments = DB::table('comments')
                     <span class="mydate">
                         {{ date('Y', strtotime($comments->created_at . ' -1 year')) }}-{{ date('Y', strtotime($comments->created_at)) }}
                     </span>
+                    <p class="news-month">APR</p>
                     <span class="date">{{ date('d', strtotime($comments->created_at)) }}</span>
                 </div>
                 <div class="news-content news-content-1">
                     <h6>
                         <img src="{{ asset('assets/img/word.png') }}" class="pdf-label" alt="pdf">
-                        {{ basename($comments->pdf) }} 
+
+                        {{($comments->pdf) }} 
+
                         @if($comments->is_new == '1')
                             <span class="new-label">New</span>
                         @endif

@@ -212,7 +212,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4 md-mb-50">
                             <div class="images-part">
-                                <img src="assets/img/team/office/kg-senthilkumar.png"
+                                <img src="assets/img/team/office/kg-senthilkumar.jpeg"
                                     alt="images">
                             </div>
                         </div>
