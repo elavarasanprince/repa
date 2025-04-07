@@ -149,7 +149,7 @@ $forms = DB::table('forms')->orderBy('created_at', 'desc')->where('status','acti
     <thead>
         <tr>
             <th>SNo.</th>
-            <th>Form Name</th>
+            <th>Forms Name</th>
             <th>Download</th>
         </tr>
     </thead>
@@ -270,7 +270,7 @@ $comments = DB::table('comments')
 
                             <div class="col-lg-8">
                              @foreach($comments as $comments)
-    <div class="circulars-item">
+    <div class="circulars-item no-border">
         @if(auth()->check()) 
             <a href="{{ asset('storage/app/public/' . $comments->pdf) }}" target="_blank">
         @else

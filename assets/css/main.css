@@ -5194,7 +5194,7 @@ span {
 }
 
 .text-slider {
-  font-size: 50px;
+  font-size: 30px;
   height: 100px;
   line-height: 90px;
   font-weight: 700;
@@ -8663,6 +8663,10 @@ input.main-search-input::placeholder {
   font-size: 14px;
   font-weight: 500;
   line-height: 145%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
   
 }
 .news-content-1{
@@ -10119,6 +10123,8 @@ header#pt-header .pt-button:hover .pt-button-line-left {
 .images-part img{
   width: 100%;
   height: auto;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .rs-team-single .btm-info-team .con-info .ps-informations .personal-info li a {
   color: #555;
@@ -11176,6 +11182,13 @@ table.dataTable tbody th, table.dataTable tbody td {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.forcastactuals {
-  
+.latest-news a:hover {
+  text-decoration: underline;
+  background-color: #4aab3d41;
+}
+.text-alter-forcast{
+  text-transform: initial !important;
+}
+.no-border{
+  border: none !important;
 }

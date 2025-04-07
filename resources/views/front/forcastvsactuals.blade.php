@@ -60,9 +60,9 @@
         <tr class="table100-head">
             <th>S/N</th>
             <th>Date</th>
-            <th>Solar Energy <br>Forecasted <br>(in Mus)</th>
-            <th>Actual Evacuated<br> Energy as Reported <br>by TANGEDCO</th>
-            <th>Deviation<br> (In Mus) (+/-)</th>
+            <th>Solar Energy <br>Forecasted <br><span class="text-alter-forcast">(in MUs)</span></th>
+            <th>Actual Evacuated<br> Energy as Reported <br>by TANGEDCO <span class="text-alter-forcast">(in MUs)</span></th>
+            <th>Deviation<br> <span class="text-alter-forcast">(in MUs)</span> (+/-)</th>
             <th>% of Deviation</th>
         </tr>
     </thead>
@@ -103,9 +103,9 @@
         <tr class="table100-head forcastactuals">
             <th>S/N</th>
             <th>Date</th>
-            <th>Wind Energy <br>Forecasted <br>(in Mus)</th>
-            <th>Actual Evacuated<br> Energy as Reported <br>by TANGEDCO</th>
-            <th>Deviation<br> (In Mus) (+/-)</th>
+            <th >Wind Energy <br>Forecasted <br> <span class="text-alter-forcast">(in MUs)</span></th>
+            <th>Actual Evacuated<br> Energy as Reported <br>by TANGEDCO <span class="text-alter-forcast">(in MUs)</span></th>
+            <th>Deviation<br> <span class="text-alter-forcast">(in MUs)</span> (+/-)</th>
             <th>% of Deviation</th>
         </tr>
     </thead>

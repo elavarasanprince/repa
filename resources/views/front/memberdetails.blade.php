@@ -27,9 +27,21 @@
                 <h1 class="wow fadeInUp" data-wow-delay=".3s">Member Details</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
-                        <a href="index.php">
+                        <a href="{{ url('/') }}">
                             Home
                         </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                    <li>
+                        Member List
+                    </li>
+                    <li>
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                    <li>
+                        Members
                     </li>
                     <li>
                         <i class="fas fa-chevron-right"></i>
@@ -47,9 +59,9 @@
         <div class="rs-team-single ">
             <div class="container">
                 <div class="section-title text-center pb-5">
-                    <span class="wow fadeInUp">Member Details</span>
+                   
                     <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                        Member Details
+                        {{ $profile->oftheCompany}}
                     </h2>
                 </div>
                 <div class="btm-info-team">
@@ -63,7 +75,7 @@
                         <div class="col-lg-8">
                             <div class="con-info">
                                 <span class="designation-info">{{ $profile->designation}}</span>
-                                <h2 class="title"> {{ $profile->member_name}} <br><span class="degr">{{ $profile->oftheCompany}}</span></h2>
+                                <h2 class="title"> {{ $profile->member_name}} </h2>
 
                                 <div class="ps-informations">
 
@@ -93,6 +105,14 @@
                                             <div class="content"> {{$profile->url }}
                                             </div>
                                         </li>
+                                        <li class="team-list"><i class="fa-solid fa-solar-panel"></i>
+                                            <div class="content"> Solar
+                                            </div>
+                                        </li>
+                                        <li class="team-list"><i class="fa-solid fa-fan"></i>
+                                            <div class="content"> Wind
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -106,7 +126,14 @@
 
 
 
-
+                <div class="commen-btn text-center">
+                    <a href="{{url('/members')}}" class="them-btn">
+                        <span>
+                        Back to Member List 
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </span>
+                </a>
+        </div>
 
             </div>
         </div>

@@ -197,6 +197,9 @@ Route::post('/latestnews/delete', [MemberController::class, 'latestdelete'])->na
 
     Route::put('/comment/update/{id}', [CircularController::class, 'commentUpdate'])->name('comment.update');
     Route::delete('/comment/{id}/delete', [CircularController::class, 'commentdestroy'])->name('comment.destroy');
+   
+   
+    Route::view('welcome')->name('home');
 
 
 });

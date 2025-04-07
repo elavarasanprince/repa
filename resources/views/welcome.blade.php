@@ -280,48 +280,51 @@
                     <span class="text-white wow fadeInUp">REPA DASHBOARD </span> <span class="small-ltr">(as on date)</span>
 
                     <h2 class="text-white wow fadeInUp fs-32" data-wow-delay=".3s">
-                        Key insights on <br> REPA capacities
+                        Key insights on REPA capacities
                     </h2>
                 </div>
-                <div class="counter-area">
-                    <div class="counter-items wow fadeInUp" data-wow-delay=".3s">
-                        <div class="icon">
-                            <img src="assets/img/icons/team.png" alt="icon-img">
+                <div class="row">
+                    <div class="counter-area">
+                        <div class="counter-items wow fadeInUp" data-wow-delay=".3s">
+                            <div class="icon">
+                                <img src="assets/img/icons/team.png" alt="icon-img">
+                            </div>
+                            <div class="content">
+                                <h2><span class="count">{{$memberscount}}</span>+</h2>
+                                <p> Members
+                                </p>
+                            </div>
                         </div>
-                        <div class="content">
-                            <h2><span class="count">{{$memberscount}}</span>+</h2>
-                            <p> Members
-                            </p>
+                        <div class="counter-items wow fadeInUp" data-wow-delay=".5s">
+                            <div class="icon">
+                                <img src="assets/img/icons/total-energy.png" alt="icon-img">
+                            </div>
+                            <div class="content">
+                                <h2><span class="count">{{$totalre}} </span>+<span class="mw-text">MW</span> </h2>
+                                <p>Total RE capacity</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="counter-items wow fadeInUp" data-wow-delay=".5s">
-                        <div class="icon">
-                            <img src="assets/img/icons/total-energy.png" alt="icon-img">
+                        <div class="counter-items wow fadeInUp" data-wow-delay=".7s">
+                            <div class="icon">
+                                <img src="assets/img/icons/wind-mill.png" alt="icon-img">
+                            </div>
+                            <div class="content">
+                                <h2><span class="count">{{$wind_energy}}</span>+<span class="mw-text">MW</span></h2>
+                                <p> Wind Energy</p>
+                            </div>
                         </div>
-                        <div class="content">
-                            <h2><span class="count">{{$totalre}} </span>+<span class="mw-text">MW</span> </h2>
-                            <p>Total RE capacity</p>
-                        </div>
-                    </div>
-                    <div class="counter-items wow fadeInUp" data-wow-delay=".7s">
-                        <div class="icon">
-                            <img src="assets/img/icons/wind-mill.png" alt="icon-img">
-                        </div>
-                        <div class="content">
-                            <h2><span class="count">{{$wind_energy}}</span>+<span class="mw-text">MW</span></h2>
-                            <p> Wind Energy</p>
-                        </div>
-                    </div>
-                    <div class="counter-items wow fadeInUp" data-wow-delay=".9s">
-                        <div class="icon">
-                            <img src="assets/img/icons/solar-panel.png" alt="icon-img">
-                        </div>
-                        <div class="content">
-                            <h2><span class="count">{{$totalsolar}}</span>+<span class="mw-text">MW</span></h2>
-                            <p>Solar Energy</p>
+                        <div class="counter-items wow fadeInUp" data-wow-delay=".9s">
+                            <div class="icon">
+                                <img src="assets/img/icons/solar-panel.png" alt="icon-img">
+                            </div>
+                            <div class="content">
+                                <h2><span class="count">{{$totalsolar}}</span>+<span class="mw-text">MW</span></h2>
+                                <p>Solar Energy</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+               
             </div>
         </div>
     </section>
