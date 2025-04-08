@@ -8638,16 +8638,15 @@ input.main-search-input::placeholder {
   padding: 5px 0px;
   display: inline-block;
 }
-.news-content-1 h6{
+.news-content-1 .moreclamb{
   font-size: 14px;
   font-weight: 500;
   line-height: 145%;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  display: -webkit-box;
-  height: 75px;
-  
+  display: -webkit-inline-box;
+  /* display: inline; */
 }
 .news-content-1{
   position: absolute;
@@ -8991,8 +8990,8 @@ input.main-search-input::placeholder {
   padding: 5px 5px 3px 5px;
   border-radius: 4px;
   text-transform: capitalize;
-  position: static;
-  top: 3px;
+  position: relative;
+  top: -10px;
   font-weight: 500;
   margin-left: 2px;
   -webkit-animation: newlabel infinite 0.4s;
@@ -11175,7 +11174,7 @@ table.dataTable tbody th, table.dataTable tbody td {
 .no-border{
   border: none !important;
 }
-.news-content-1:hover, .news-content:hover {
+.news-content-1 .moreclamb:hover {
   text-decoration: underline;
   cursor: pointer;
 }

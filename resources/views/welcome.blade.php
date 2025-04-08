@@ -376,13 +376,14 @@
                     <span class="date">{{ date('d', strtotime($circular->created_at)) }}</span>
                                             </div>
                                           <div class="news-content news-content-1">
-                    <h6>
+                    <span class="moreclamb">
                         <img src="{{ asset('assets/img/word.png') }}" class="pdf-label" alt="pdf">
                         {{ basename($circular->name) }} 
-                        @if($circular->is_new == '1')
-                            <span class="new-label">New</span>
-                        @endif
-                    </h6>
+                       
+                    </span>
+                    @if($circular->is_new == '1')
+                    <span class="new-label">New</span>
+                @endif
                 </div>
                                         </div>
 
